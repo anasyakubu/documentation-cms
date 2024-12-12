@@ -1,6 +1,6 @@
 import { buttonVariants } from "@/components/ui/button";
 import { page_routes } from "@/lib/routes-config";
-import { MoveUpRightIcon, TerminalSquareIcon } from "lucide-react";
+import { MoveUpRightIcon, ExternalLink } from "lucide-react";
 import Link from "next/link";
 
 export default function Home() {
@@ -15,18 +15,19 @@ export default function Home() {
         <MoveUpRightIcon className="w-4 h-4 font-extrabold" />
       </Link>
       <h1 className="text-3xl font-bold mb-4 sm:text-6xl">
-        Effortlessly build stunning documentation sites with Next.js and server
-        components.
+        Unleash the Power of Your Portfolio with the CMS Hub Portfolio API.
       </h1>
       <p className="mb-8 sm:text-xl max-w-[800px] text-muted-foreground">
-        This feature-packed documentation template, built with Next.js, offers a
-        sleek and responsive design, perfect for all your project documentation
-        needs.
+        Effortlessly integrate our api into your portfolio, application,
+        website, or platform.
       </p>
-      <div className="flex flex-row items-center gap-5">
+      <div className="flex  flex-row items-center gap-5">
         <Link
           href={`/docs${page_routes[0].href}`}
-          className={buttonVariants({ className: "px-6", size: "lg" })}
+          className={buttonVariants({
+            className: "px-6 p-5 bg-black text-white",
+            size: "lg",
+          })}
         >
           Get Stared
         </Link>
@@ -42,8 +43,8 @@ export default function Home() {
         </Link>
       </div>
       <span className="flex flex-row items-start sm:gap-2 gap-0.5 text-muted-foreground text-md mt-7 -mb-12 max-[800px]:mb-12 font-code sm:text-base text-sm font-medium">
-        <TerminalSquareIcon className="w-5 h-5 sm:mr-1 mt-0.5" />
-        {"npx create-aria-doc <project-directory>"}
+        <ExternalLink className="w-5 h-5 sm:mr-1 mt-0.5" />
+        {"https://api-anasyakubu-cms.vercel.app"}
       </span>
     </div>
   );

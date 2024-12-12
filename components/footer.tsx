@@ -12,16 +12,9 @@ export function Footer() {
             Build by{" "}
             <Link
               className="px-1 underline underline-offset-2"
-              href="https://github.com/nisabmohd"
+              href="https://github.com/anasyakubu"
             >
-              nisabmohd
-            </Link>
-            . The source code is available on{" "}
-            <Link
-              className="px-1 underline underline-offset-2"
-              href="https://github.com/nisabmohd/Aria-Docs"
-            >
-              GitHub
+              anasyakubu
             </Link>
             .
           </p>
@@ -39,14 +32,14 @@ export function FooterButtons() {
   return (
     <>
       <Link
-        href="https://vercel.com/templates/next.js/documentation-template"
+        href=""
         className={buttonVariants({ variant: "outline", size: "sm" })}
       >
         <TriangleIcon className="h-[0.8rem] w-4 mr-2 text-primary fill-current" />
         Deploy
       </Link>
       <Link
-        href="https://github.com/sponsors/nisabmohd"
+        href="https://github.com/anasyakubu"
         className={buttonVariants({ variant: "outline", size: "sm" })}
       >
         <HeartIcon className="h-4 w-4 mr-2 text-red-600 fill-current" />
