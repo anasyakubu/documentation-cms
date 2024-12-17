@@ -20,10 +20,10 @@ const GeistMono = Space_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AriaDocs - Template",
-  metadataBase: new URL("https://ariadocs.vercel.app/"),
+  title: "PortCMS - documentation",
+  metadataBase: new URL("https://docs-port-cms.vercel.app/"),
   description:
-    "This comprehensive documentation template, crafted with Next.js and available as open-source, delivers a sleek and responsive design, tailored to meet all your project documentation requirements.",
+    "Build, Manage, and Showcase Your Projects Effortlessly — No Coding Skills Required!",
 };
 
 export default function RootLayout({
