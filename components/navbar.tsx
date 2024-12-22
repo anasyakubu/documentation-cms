@@ -24,10 +24,6 @@ export const NAVLINKS = [
     href: "https://github.com/anasyakubu",
   },
   {
-    title: "Postman",
-    href: "https://warped-eclipse-550672.postman.co/workspace/Anas-Yakubu~58b1c9d4-ebd5-4b03-89b1-b4ae9a463580/collection/25025041-d7298f52-4fe3-4420-bf00-51da0570f60a?action=share&creator=25025041",
-  },
-  {
     title: "Dashboard",
     href: "https://port-cms.vercel.app/Login",
   },
