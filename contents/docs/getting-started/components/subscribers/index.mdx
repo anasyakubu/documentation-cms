@@ -1,0 +1,107 @@
+---
+title: Subscribers
+description: This section previews all the user Subscribers.
+---
+
+**POST**
+
+- Send a POST request to the following endpoint:
+
+  ```bash
+  GET /content/subscribers/add
+  ```
+
+  **Headers**
+
+```bash
+ Authorization:
+
+ Key     x-api-key
+
+ Value 1c468fa0696213bb17aa3bd0fa98f902522d16da0f9bb95f4582101e1677e74a
+```
+
+## Code
+
+```js
+   const axios = require("axios");
+
+   const apiUrl = "{{BASE_URL}}/subscribers/add";
+   const apiKey = "YOUR_API_KEY;
+
+axios.post(apiUrl, { key: 'value' }, {
+  headers: {
+    'x-api-key': apiKey,
+  },
+})
+  .then(response => {
+    console.log('Data:', response.data);
+  })
+  .catch(error => {
+    console.error('Error:', error.response ? error.response.data : error.message);
+  });
+
+```
+
+**GET**
+
+- To retrieve a list of Subscribers, send a GET request to the following endpoint:
+
+  ```bash
+  GET / content / subscribers;
+  ```
+
+**Headers**
+
+```bash
+ Authorization:
+
+ Key     x-api-key
+
+ Value 1c468fa0696213bb17aa3bd0fa98f902522d16da0f9bb95f4582101e1677e74a
+```
+
+## Code
+
+```js
+   const axios = require("axios");
+
+   const apiUrl = "{{BASE_URL}}/subscribers";
+   const apiKey = "YOUR_API_KEY;
+
+   axios
+     .get(apiUrl, {
+       headers: {
+         "x-api-key": apiKey,
+       },
+     })
+     .then((response) => {
+       console.log("Data:", response.data);
+     })
+     .catch((error) => {
+       console.error(
+         "Error:",
+         error.response ? error.response.data : error.message
+       );
+     });
+```
+
+**Response**
+
+```json
+{
+  "status": 200,
+  "data": [
+    {
+      "id": "1",
+      "email": "yakubuanas04@gmail.com",
+      "createdAt": "2024-12-17T10:00:00.000Z"
+    },
+    {
+      "id": "2",
+      "email": "yakubuanas04@gmail.com",
+      "createdAt": "2024-12-16T12:00:00.000Z"
+    }
+  ]
+}
+```

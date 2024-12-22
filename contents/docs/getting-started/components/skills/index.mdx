@@ -1,0 +1,67 @@
+---
+title: Skills
+description: This section previews all the user Skills.
+---
+
+**GET**
+
+- To retrieve a list of Skills, send a GET request to the following endpoint:
+
+  ```bash
+  GET / content / skills;
+  ```
+
+**Headers**
+
+```bash
+ Authorization:
+
+ Key     x-api-key
+
+ Value 1c468fa0696213bb17aa3bd0fa98f902522d16da0f9bb95f4582101e1677e74a
+```
+
+## Code
+
+```js
+   const axios = require("axios");
+
+   const apiUrl = "{{BASE_URL}}/skills";
+   const apiKey = "YOUR_API_KEY;
+
+   axios
+     .get(apiUrl, {
+       headers: {
+         "x-api-key": apiKey,
+       },
+     })
+     .then((response) => {
+       console.log("Data:", response.data);
+     })
+     .catch((error) => {
+       console.error(
+         "Error:",
+         error.response ? error.response.data : error.message
+       );
+     });
+```
+
+**Response**
+
+```json
+{
+  "status": 200,
+  "data": [
+    {
+      "id": "1",
+      "skills": "Python",
+      "createdAt": "2024-12-17T10:00:00.000Z"
+    },
+    {
+      "id": "2",
+      "skills": "Typescript",
+      "createdAt": "2024-12-16T12:00:00.000Z"
+    }
+  ]
+}
+```
