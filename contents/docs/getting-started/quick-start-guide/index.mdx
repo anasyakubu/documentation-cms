@@ -16,30 +16,59 @@ description: Once logged in, users can generate an API key to use for secure acc
 2. **Headers**
 
    ```typescript
-    Authorization: Bearer ak_test_1234567890abcdef
+    Authorization:
+
+    Key     x-api-key
+
+    Value 1c468fa0696213bb17aa3bd0fa98f902522d16da0f9bb95f4582101e1677e74a
    ```
 
-3. **Response**
+3. **Request**
 
    ```typescript
-    {
-   "status": "success",
-   "data": [
-    {
-      "id": "1",
-      "title": "Project Alpha",
-      "description": "This is the first project.",
-      "createdAt": "2024-12-17T10:00:00.000Z"
-    },
-    {
-      "id": "2",
-      "title": "Project Beta",
-      "description": "This is the second project.",
-      "createdAt": "2024-12-16T12:00:00.000Z"
-    }
-   ]
-   }
+   const axios = require("axios");
+
+   const apiUrl = "{{BASE_URL}}";
+   const apiKey = "YOUR_API_KEY;
+
+   axios
+     .get(apiUrl, {
+       headers: {
+         "x-api-key": apiKey,
+       },
+     })
+     .then((response) => {
+       console.log("Data:", response.data);
+     })
+     .catch((error) => {
+       console.error(
+         "Error:",
+         error.response ? error.response.data : error.message
+       );
+     });
    ```
+
+4. **Response**
+
+```typescript
+{
+"status": "success",
+"data": [
+{
+"id": "1",
+"title": "Project Alpha",
+"description": "This is the first project.",
+"createdAt": "2024-12-17T10:00:00.000Z"
+},
+{
+"id": "2",
+"title": "Project Beta",
+"description": "This is the second project.",
+"createdAt": "2024-12-16T12:00:00.000Z"
+}
+]
+}
+```
 
 ## Explore Further
 
