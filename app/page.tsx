@@ -34,14 +34,14 @@ export default function Home() {
           Get Stared
         </Link>
         <Link
-          href="/blog"
+          href="https://port-cms.vercel.app/Login"
           className={buttonVariants({
             variant: "secondary",
             className: "px-6",
             size: "lg",
           })}
         >
-          Read Blog
+          Get API Key
         </Link>
       </div>
       <span className="flex flex-row items-start sm:gap-2 gap-0.5 text-muted-foreground text-md mt-7 -mb-12 max-[800px]:mb-12 font-code sm:text-base text-sm font-medium">
